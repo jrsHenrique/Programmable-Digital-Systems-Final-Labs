@@ -6,14 +6,14 @@ module ULA(
     output reg [0:31] outputULA 
 );
 
-always @(posedge clk) begin
+always @(*) begin
     case(inputULA)
         4'b0000: outputULA = a & b;         
         4'b0001: outputULA = a | b;         
         4'b0010: outputULA = a + b;         
         4'b0110: outputULA = a - b;         
         4'b0111: outputULA = (a < b) ? 32'b1 : 32'b0; 
-        default: outputULA = 32'b0;         // Default case (error)
+        default: outputULA = 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;         // Default case (error)
     endcase
 end
 

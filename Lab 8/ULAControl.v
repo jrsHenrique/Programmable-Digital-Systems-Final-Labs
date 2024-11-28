@@ -22,7 +22,7 @@ always @(*) begin
                 6'b100100: inputALU = 4'b0000;  
                 6'b100101: inputALU = 4'b0001;  
                 6'b101010: inputALU = 4'b0111;  
-                default: inputALU = 4'b0000;    // Default case (error)
+                default: inputALU = 4'bxxxx;    // Default case (error)
             endcase
         end
         
